@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d0676c265128443a5ec1619a66216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWaypoint: {fileID: 890261666}
+  startWaypoint: {fileID: 939255703}
   endWaypoint: {fileID: 1933374368}
 --- !u!4 &803472200 stripped
 Transform:
@@ -384,6 +384,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4983606974049652, guid: 9f7fc65b81d21814bbda2f4a06853778,
     type: 2}
   m_PrefabInternal: {fileID: 989643668}
+--- !u!114 &939255703 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114445917580467684, guid: 9f7fc65b81d21814bbda2f4a06853778,
+    type: 2}
+  m_PrefabInternal: {fileID: 989643668}
+  m_Script: {fileID: 11500000, guid: 8469fb86b76934e4ca8f75ef46abf3f4, type: 3}
 --- !u!1001 &960639859
 Prefab:
   m_ObjectHideFlags: 0

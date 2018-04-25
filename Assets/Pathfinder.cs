@@ -24,13 +24,12 @@ public class Pathfinder : MonoBehaviour
 		LoadBlocks();
 		ColorStartAndEnd();
 		Pathfind();
-
 		// ExploreNeighbours();
 	}
 
     private void LoadBlocks()
     {
-        var waypoints = FindObjectsOfType<Waypoint>();
+        Waypoint[] waypoints = FindObjectsOfType<Waypoint>();
 		foreach (Waypoint waypoint in waypoints)
 		{
 			// overlapping blocks?
@@ -54,16 +53,42 @@ public class Pathfinder : MonoBehaviour
 		endWaypoint.SetTopColor(Color.black);
     }
 
-	    private void ExploreNeighbours()
+	private void Pathfind()
     {
-        foreach(Vector2Int direction in directions)
+        queue.Enqueue(startWaypoint);
+
+		while (queue.Count > 0 && isRunning)
+        {
+            Waypoint searchCenter = queue.Dequeue();
+			searchCenter.isExplored = true;
+            HaltIfEndFound(searchCenter);
+			ExploreNeighbours(searchCenter);
+        }
+		// TODO workout pathfinding
+		print("Finished pathfinding?");
+    }
+
+	private void HaltIfEndFound(Waypoint searchCenter)
+    {
+        if (searchCenter == endWaypoint)
+        {
+            print("Searching from end node, therefore stoppping"); // TODO remove later
+			isRunning = false;
+        }
+    }
+
+	private void ExploreNeighbours(Waypoint from)
+    {
+		if (!isRunning) { return; }
+
+        foreach (Vector2Int direction in directions)
 		{
-			Vector2Int explorationCoordinates = startWaypoint.GetGridPos() + direction;
+			Vector2Int neighbourCoordinates = from.GetGridPos() + direction;
 			try
-			{
-				grid[explorationCoordinates].SetTopColor(Color.blue);
-			}
-			catch
+            {
+                QueueNewNeighbours(neighbourCoordinates);
+            }
+            catch
 			{
 				// do nothing
 			}
@@ -71,24 +96,19 @@ public class Pathfinder : MonoBehaviour
 		}
     }
 
-    private void Pathfind()
+    private void QueueNewNeighbours(Vector2Int neighbourCoordinates)
     {
-        queue.Enqueue(startWaypoint);
-
-		while(queue.Count > 0)
-        {
-            var searchCenter = queue.Dequeue();
-            HaltIfEndFound(searchCenter);
-        }
-		print("Finished pathfinding?");
-    }
-
-    private void HaltIfEndFound(Waypoint searchCenter)
-    {
-        if (searchCenter == endWaypoint)
-        {
-            print("Searching from end node, therefore stoppping"); // TODO remove later
-			isRunning = false;
-        }
+		Waypoint neighbour = grid[neighbourCoordinates];
+		if(neighbour.isExplored)
+		{
+			// do nothing
+		}
+		else
+		{
+        	neighbour.SetTopColor(Color.blue); // TODO move later
+        	queue.Enqueue(neighbour);
+        	print("Queueing " + neighbour);
+		}
+        
     }
 }
