@@ -4,11 +4,30 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour 
 {
+	[SerializeField] Color exploredColor;
+
+	// public is ok here as is a data class
 	public bool isExplored = false; 
+	public Waypoint exploredFrom;
 	
 	const int gridSize = 10;
 
 	Vector2Int gridPos;
+
+	void Update()
+	{
+		// TODO remove later
+		if (isExplored)
+		{
+			SetTopColor(exploredColor);
+		}
+		else
+		{
+			// do nothing
+		}
+
+		
+	}
 	
 	public int GetGridSize()
 	{
@@ -27,6 +46,6 @@ public class Waypoint : MonoBehaviour
 	public void SetTopColor(Color color) 
 	{
 		MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-		topMeshRenderer.material.color = color;
+		topMeshRenderer.material.color = color;	    
 	}
 }
