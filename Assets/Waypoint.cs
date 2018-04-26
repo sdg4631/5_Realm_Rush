@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour 
 {
-	[SerializeField] Color exploredColor;
-
 	// public is ok here as is a data class
 	public bool isExplored = false; 
 	public Waypoint exploredFrom;
@@ -16,16 +14,6 @@ public class Waypoint : MonoBehaviour
 
 	void Update()
 	{
-		// TODO remove later
-		if (isExplored)
-		{
-			SetTopColor(exploredColor);
-		}
-		else
-		{
-			// do nothing
-		}
-
 		
 	}
 	

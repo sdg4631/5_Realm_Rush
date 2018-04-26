@@ -11,6 +11,7 @@ public class Pathfinder : MonoBehaviour
 	Queue<Waypoint> queue = new Queue<Waypoint>();
 	bool isRunning = true;
 	Waypoint searchCenter; // current search center
+	List<Waypoint> path = new List<Waypoint>();
 
 	Vector2Int[] directions = 
 	{
@@ -20,13 +21,30 @@ public class Pathfinder : MonoBehaviour
 		Vector2Int.left
 	};
 
-	void Start()
+	// For EnemyMovement
+	public List<Waypoint> GetPath()
 	{
 		LoadBlocks();
 		ColorStartAndEnd();
-		Pathfind();
-		// ExploreNeighbours();
+		BreadthFristSearch();
+		CreatePath();
+		return path;
 	}
+
+    private void CreatePath()
+    {
+        path.Add(endWaypoint);
+		
+		Waypoint previous = endWaypoint.exploredFrom;
+		while ( previous != startWaypoint)
+		{
+			path.Add(previous);
+			previous = previous.exploredFrom;
+		}
+
+		path.Add(startWaypoint);
+		path.Reverse();
+    }
 
     private void LoadBlocks()
     {
@@ -50,11 +68,12 @@ public class Pathfinder : MonoBehaviour
 
     private void ColorStartAndEnd()
     {
+		// TODO consider moving to Waypoint.cs
         startWaypoint.SetTopColor(Color.white);
 		endWaypoint.SetTopColor(Color.black);
     }
 
-	private void Pathfind()
+	private void BreadthFristSearch()
     {
         queue.Enqueue(startWaypoint);
 
@@ -65,8 +84,8 @@ public class Pathfinder : MonoBehaviour
             HaltIfEndFound();
 			ExploreNeighbours();
         }
-		// TODO workout pathfinding
-		print("Finished pathfinding?");
+		// TODO workout BreadthFristSearching
+		print("Finished BreadthFristSearching?");
     }
 
 	private void HaltIfEndFound()
@@ -84,15 +103,10 @@ public class Pathfinder : MonoBehaviour
         foreach (Vector2Int direction in directions)
 		{
 			Vector2Int neighbourCoordinates = searchCenter.GetGridPos() + direction;
-			try
+			if (grid.ContainsKey(neighbourCoordinates))
             {
                 QueueNewNeighbours(neighbourCoordinates);
-            }
-            catch
-			{
-				// do nothing
-			}
-			
+            }			
 		}
     }
 
