@@ -24,26 +24,19 @@ public class Pathfinder : MonoBehaviour
 	// For EnemyMovement
 	public List<Waypoint> GetPath()
 	{
-		LoadBlocks();
-		ColorStartAndEnd();
-		BreadthFristSearch();
-		CreatePath();
-		return path;
+		if(path.Count == 0)
+        {
+            CalculatePath();
+        }
+        return path;		
 	}
 
-    private void CreatePath()
+    private void CalculatePath()
     {
-        path.Add(endWaypoint);
-		
-		Waypoint previous = endWaypoint.exploredFrom;
-		while ( previous != startWaypoint)
-		{
-			path.Add(previous);
-			previous = previous.exploredFrom;
-		}
-
-		path.Add(startWaypoint);
-		path.Reverse();
+        LoadBlocks();
+        ColorStartAndEnd();
+        BreadthFristSearch();
+        CreatePath();
     }
 
     private void LoadBlocks()
@@ -121,7 +114,21 @@ public class Pathfinder : MonoBehaviour
 		{      	
         	queue.Enqueue(neighbour);
 			neighbour.exploredFrom = searchCenter;
+		}       
+    }
+
+	private void CreatePath()
+    {
+        path.Add(endWaypoint);
+		
+		Waypoint previous = endWaypoint.exploredFrom;
+		while ( previous != startWaypoint)
+		{
+			path.Add(previous);
+			previous = previous.exploredFrom;
 		}
-        
+
+		path.Add(startWaypoint);
+		path.Reverse();
     }
 }
