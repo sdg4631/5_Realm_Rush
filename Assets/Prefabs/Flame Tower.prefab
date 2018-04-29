@@ -293,7 +293,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 4140033659436192}
-  targetEnemy: {fileID: 0}
   attackRange: 30
   projectileParticle: {fileID: 198777194032295758}
 --- !u!198 &198777194032295758
@@ -2762,7 +2761,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.27
+      scalar: 0.15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2803,7 +2802,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.15
       minScalar: 0
       maxCurve:
         serializedVersion: 2

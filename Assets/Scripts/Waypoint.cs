@@ -13,6 +13,8 @@ public class Waypoint : MonoBehaviour
 
 	Vector2Int gridPos;
 
+	[SerializeField] Tower towerPrefab;
+
 	void Update()
 	{
 		
@@ -38,7 +40,9 @@ public class Waypoint : MonoBehaviour
 		{
 			if (isPlaceable)
 			{
+				Instantiate(towerPrefab, transform.position, Quaternion.identity);
 				Debug.Log("Tower placed at: " + gameObject.name);
+				isPlaceable = false;
 			}
 			else
 			{

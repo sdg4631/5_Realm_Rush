@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour 
 {
+	// TODO attach lights to block prefab that turn on if part of enemy path
+
 	[SerializeField] Waypoint startWaypoint, endWaypoint;
 
 	Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
