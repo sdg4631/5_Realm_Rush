@@ -34,7 +34,6 @@ public class Pathfinder : MonoBehaviour
     private void CalculatePath()
     {
         LoadBlocks();
-        ColorStartAndEnd();
         BreadthFristSearch();
         CreatePath();
     }
@@ -57,13 +56,6 @@ public class Pathfinder : MonoBehaviour
 				grid.Add(gridPos, waypoint);				
 			}			
 		}
-    }
-
-    private void ColorStartAndEnd()
-    {
-		// TODO consider moving to Waypoint.cs
-        startWaypoint.SetTopColor(Color.white);
-		endWaypoint.SetTopColor(Color.black);
     }
 
 	private void BreadthFristSearch()

@@ -159,6 +159,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 700ff3467e6f35c4d9307b685e8746d1, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &23397583 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114445917580467684, guid: 9f7fc65b81d21814bbda2f4a06853778,
+    type: 2}
+  m_PrefabInternal: {fileID: 1383196351}
+  m_Script: {fileID: 11500000, guid: 8469fb86b76934e4ca8f75ef46abf3f4, type: 3}
 --- !u!4 &28308154 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1,
@@ -710,6 +716,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 265491941}
+  - component: {fileID: 265491942}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -724,13 +731,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 265491940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 234215253}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &265491942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265491940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465ebac897c79d442abc032ee55d4baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsBetweenSpawns: 5
+  enemyPrefab: {fileID: 114482940722489748, guid: b848245588ce57a4f8bfd41af93e3431,
+    type: 2}
 --- !u!4 &273990437 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4983606974049652, guid: 9f7fc65b81d21814bbda2f4a06853778,
@@ -745,7 +766,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4202491268912910, guid: b848245588ce57a4f8bfd41af93e3431, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 4202491268912910, guid: b848245588ce57a4f8bfd41af93e3431, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1785,7 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d0676c265128443a5ec1619a66216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWaypoint: {fileID: 890261666}
+  startWaypoint: {fileID: 23397583}
   endWaypoint: {fileID: 1946679699}
 --- !u!1001 &774805469
 Prefab:
@@ -2108,12 +2129,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4983606974049652, guid: 9f7fc65b81d21814bbda2f4a06853778,
     type: 2}
   m_PrefabInternal: {fileID: 931858506}
---- !u!114 &890261666 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114445917580467684, guid: 9f7fc65b81d21814bbda2f4a06853778,
-    type: 2}
-  m_PrefabInternal: {fileID: 931858506}
-  m_Script: {fileID: 11500000, guid: 8469fb86b76934e4ca8f75ef46abf3f4, type: 3}
 --- !u!1001 &913778568
 Prefab:
   m_ObjectHideFlags: 0

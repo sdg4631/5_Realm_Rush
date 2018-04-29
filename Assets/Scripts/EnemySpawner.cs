@@ -9,8 +9,6 @@ public class EnemySpawner : MonoBehaviour
 	[SerializeField] float secondsBetweenSpawns= 5f;
 	[SerializeField] EnemyMovement enemyPrefab;
 
-	Vector3 spawnLocation;
-
 	void Start() 
 	{
 		StartCoroutine(SpawnEnemies());
@@ -20,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     {
 		while(true) // forever
 		{
-			print("spawning");
+			Instantiate(enemyPrefab, transform.position, Quaternion.identity);
 			yield return new WaitForSeconds(secondsBetweenSpawns);
 		}
     }
