@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour 
+public class EnemyDamage : MonoBehaviour 
 {
-
+	[SerializeField] Collider collisionMesh;
 	[SerializeField] GameObject deathFX;
 	[SerializeField] Transform parent;
-	[SerializeField] int enemyHealth = 500;
+	[SerializeField] int hitPoints = 500;
 	
 
 
@@ -17,21 +17,16 @@ public class Enemy : MonoBehaviour
 		AddBoxCollider();
 	}
 
-	void Update()
-	{
-		print(enemyHealth);
-	}
-
     private void AddBoxCollider()
     {
         Collider boxCollider = gameObject.AddComponent<BoxCollider>();
 		boxCollider.isTrigger = false;
     }
 
-	void OnParticleCollision(GameObject other)
+	void OnParticleCollision(GameObject collisionMesh)
 	{
 		ProcessHits();
-		if (enemyHealth <= 0)
+		if (hitPoints <= 0)
 		{
 			KillEnemy();
 		}
@@ -40,16 +35,15 @@ public class Enemy : MonoBehaviour
 
     private void ProcessHits()
     {
-		enemyHealth = enemyHealth - 1;
-        print("Hit!");
+		hitPoints = hitPoints - 1;
+        print("Current hitpoints: " + hitPoints); // TODO remove
     }
 
     private void KillEnemy()
     {
 		// TODO find a way to make explosion independent of enemy movement script
-		
-		deathFX.SetActive(true);	
-		Destroy(this.gameObject);
+			
+		Destroy(gameObject);
 		
     }
 }
