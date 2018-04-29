@@ -30,4 +30,9 @@ public class Waypoint : MonoBehaviour
        		Mathf.RoundToInt(transform.position.z / gridSize)
 		);	
 	}
+
+	void OnMouseOver()
+	{
+		Debug.Log("Mouse is over " + gameObject.name);
+	}
 }
