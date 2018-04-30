@@ -170,57 +170,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1,
     type: 2}
   m_PrefabInternal: {fileID: 885607679}
---- !u!1001 &33274231
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1604051957}
-    m_Modifications:
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114305958497002232, guid: 5e311d5669ae24444ae59ef2163f9d85,
-        type: 2}
-      propertyPath: targetEnemy
-      value: 
-      objectReference: {fileID: 234215253}
-    - target: {fileID: 1143187708689898, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_Name
-      value: Flame Tower (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &37964929 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1,
@@ -630,11 +579,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f7fc65b81d21814bbda2f4a06853778, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &232351173 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85,
-    type: 2}
-  m_PrefabInternal: {fileID: 33274231}
 --- !u!4 &234215253 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4202491268912910, guid: b848245588ce57a4f8bfd41af93e3431,
@@ -3031,11 +2975,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4983606974049652, guid: 9f7fc65b81d21814bbda2f4a06853778,
     type: 2}
   m_PrefabInternal: {fileID: 1151867396}
---- !u!4 &1306557365 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85,
-    type: 2}
-  m_PrefabInternal: {fileID: 1694865008}
 --- !u!1001 &1330870878
 Prefab:
   m_ObjectHideFlags: 0
@@ -3097,57 +3036,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1,
     type: 2}
   m_PrefabInternal: {fileID: 1252941761}
---- !u!1001 &1347562020
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1604051957}
-    m_Modifications:
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114305958497002232, guid: 5e311d5669ae24444ae59ef2163f9d85,
-        type: 2}
-      propertyPath: targetEnemy
-      value: 
-      objectReference: {fileID: 234215253}
-    - target: {fileID: 1143187708689898, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_Name
-      value: Flame Tower (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &1351436295 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1,
@@ -3883,9 +3771,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 257680509}
-  - {fileID: 1835115389}
-  - {fileID: 232351173}
-  - {fileID: 1306557365}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4006,57 +3891,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4983606974049652, guid: 9f7fc65b81d21814bbda2f4a06853778,
     type: 2}
   m_PrefabInternal: {fileID: 1423592921}
---- !u!1001 &1694865008
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1604051957}
-    m_Modifications:
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114305958497002232, guid: 5e311d5669ae24444ae59ef2163f9d85,
-        type: 2}
-      propertyPath: targetEnemy
-      value: 
-      objectReference: {fileID: 234215253}
-    - target: {fileID: 1143187708689898, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-      propertyPath: m_Name
-      value: Flame Tower (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &1699671326 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1,
@@ -4408,11 +4242,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f7fc65b81d21814bbda2f4a06853778, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1835115389 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85,
-    type: 2}
-  m_PrefabInternal: {fileID: 1347562020}
 --- !u!1001 &1844786204
 Prefab:
   m_ObjectHideFlags: 0
