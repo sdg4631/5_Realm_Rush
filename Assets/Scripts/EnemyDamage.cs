@@ -6,8 +6,7 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour 
 {
 	[SerializeField] Collider collisionMesh;
-	[SerializeField] GameObject deathFX;
-	[SerializeField] Transform parent;
+	[SerializeField] ParticleSystem explosionParticlePrefab;
 	[SerializeField] int hitPoints = 500;
 	
 
@@ -41,7 +40,8 @@ public class EnemyDamage : MonoBehaviour
     private void KillEnemy()
     {
 		// TODO find a way to make explosion independent of enemy movement script
-			
+		var explosionFX = Instantiate(explosionParticlePrefab, transform.localPosition, Quaternion.identity);
+		explosionFX.Play();	
 		Destroy(gameObject);
 		
     }
