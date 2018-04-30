@@ -50,4 +50,14 @@ public class Waypoint : MonoBehaviour
 			}
 		}	
 	}
+
+	public void SetPathTopColor()
+	{
+		float intensity = 2f;
+		Material emissionColor = transform.Find("Top").GetComponent<Renderer>().material;
+		emissionColor.SetColor("_EmissionColor", Color.blue * intensity);
+		// MeshRenderer meshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
+		// meshRenderer.material.color = color;
+		
+	}
 }

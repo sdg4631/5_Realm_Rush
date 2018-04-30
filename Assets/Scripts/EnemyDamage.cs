@@ -7,6 +7,7 @@ public class EnemyDamage : MonoBehaviour
 {
 	[SerializeField] Collider collisionMesh;
 	[SerializeField] ParticleSystem explosionParticlePrefab;
+	[SerializeField] ParticleSystem sparksParticlePrefab;
 	[SerializeField] int hitPoints = 500;
 	
 
@@ -33,14 +34,15 @@ public class EnemyDamage : MonoBehaviour
 	}
 
     private void ProcessHits()
-    {
+    {		
+		sparksParticlePrefab.Play();
 		hitPoints = hitPoints - 1;
     }
 
     private void KillEnemy()
     {
 		// TODO find a way to make explosion independent of enemy movement script
-		var explosionFX = Instantiate(explosionParticlePrefab, transform.localPosition, Quaternion.identity);
+		var explosionFX = Instantiate(explosionParticlePrefab, transform.position, Quaternion.identity);
 		explosionFX.Play();	
 		Destroy(gameObject);
 		

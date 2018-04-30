@@ -8,6 +8,7 @@ public class Pathfinder : MonoBehaviour
 	// TODO attach lights to block prefab that turn on if part of enemy path
 
 	[SerializeField] Waypoint startWaypoint, endWaypoint;
+	Waypoint pathColor;
 
 	Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
 	Queue<Waypoint> queue = new Queue<Waypoint>();
@@ -130,5 +131,6 @@ public class Pathfinder : MonoBehaviour
     {
         path.Add(waypoint);
 		waypoint.isPlaceable = false;
+		waypoint.SetPathTopColor();
     }
 }
