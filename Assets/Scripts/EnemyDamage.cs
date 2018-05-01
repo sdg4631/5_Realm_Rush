@@ -41,9 +41,10 @@ public class EnemyDamage : MonoBehaviour
 
     private void KillEnemy()
     {
-		// TODO find a way to make explosion independent of enemy movement script
 		var explosionFX = Instantiate(explosionParticlePrefab, transform.position, Quaternion.identity);
 		explosionFX.Play();	
+		float destroyDelay = explosionFX.main.duration;
+		Destroy(explosionFX.gameObject, destroyDelay);
 		Destroy(gameObject);
 		
     }

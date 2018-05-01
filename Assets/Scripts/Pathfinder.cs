@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour 
 {
-	// TODO attach lights to block prefab that turn on if part of enemy path
-
 	[SerializeField] Waypoint startWaypoint, endWaypoint;
 	Waypoint pathColor;
 
@@ -72,7 +70,6 @@ public class Pathfinder : MonoBehaviour
             HaltIfEndFound();
 			ExploreNeighbours();
         }
-		// TODO workout BreadthFristSearching
 		print("Finished BreadthFristSearching?");
     }
 
