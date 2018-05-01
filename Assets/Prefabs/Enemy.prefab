@@ -466,7 +466,7 @@ MonoBehaviour:
   collisionMesh: {fileID: 65421974667315796}
   explosionParticlePrefab: {fileID: 198824075912641578}
   sparksParticlePrefab: {fileID: 198655309313851206}
-  hitPoints: 400
+  hitPoints: 300
 --- !u!114 &114482940722489748
 MonoBehaviour:
   m_ObjectHideFlags: 1
