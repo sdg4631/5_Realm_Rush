@@ -8,6 +8,7 @@ public class EnemyDamage : MonoBehaviour
 	[SerializeField] Collider collisionMesh;
 	[SerializeField] ParticleSystem explosionParticlePrefab;
 	[SerializeField] ParticleSystem sparksParticlePrefab;
+	[SerializeField] ParticleSystem detonateParticlePrefab;
 	[SerializeField] int hitPoints = 500;
 	
 
@@ -48,4 +49,13 @@ public class EnemyDamage : MonoBehaviour
 		Destroy(gameObject);
 		
     }
+
+	public void DetonateEnemy()
+	{
+		var detonateFX = Instantiate(detonateParticlePrefab, transform.position, Quaternion.identity);
+		detonateFX.Play();
+		float destroyDelay = detonateFX.main.duration;
+		Destroy(detonateFX.gameObject, destroyDelay);	
+		Destroy(gameObject);	
+	}
 }

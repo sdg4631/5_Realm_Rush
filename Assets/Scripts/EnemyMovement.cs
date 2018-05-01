@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
+	[SerializeField] float movementPeriod = .5f;
 	// Use this for initialization
 	void Start ()
 	{
@@ -22,12 +22,11 @@ public class EnemyMovement : MonoBehaviour
 
 	IEnumerator FollowPath(List<Waypoint> path)
     {
-			print("Starting Patrol");
-         foreach(Waypoint waypoint in path)
-			{
+        foreach(Waypoint waypoint in path)
+		{
 			transform.position = waypoint.transform.position;
-			yield return new WaitForSeconds(1f);
-			}
-			print("Ending Patrol");
+			yield return new WaitForSeconds(movementPeriod);
+		}
+		SendMessage("DetonateEnemy");
 	}
 }
