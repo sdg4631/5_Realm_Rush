@@ -11,11 +11,19 @@ public class EnemyDamage : MonoBehaviour
 	[SerializeField] ParticleSystem detonateParticlePrefab;
 	[SerializeField] int hitPoints = 500;
 	
-
-
+	
 	void Start() 
 	{
 		AddBoxCollider();
+	}
+
+	void Update()
+	{
+		var playerBase = FindObjectOfType<PlayerHealth>();
+		if (!playerBase)
+		{
+			DetonateEnemy();
+		}
 	}
 
     private void AddBoxCollider()

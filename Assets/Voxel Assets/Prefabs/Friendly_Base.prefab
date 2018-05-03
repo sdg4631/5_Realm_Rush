@@ -390,8 +390,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc4ab5aaa725314aaee4adf71c8347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHitPoints: 10
+  health:
+    bar: {fileID: 0}
+    maxVal: 100
+    currentVal: 100
   baseExplosionParticlePrefab: {fileID: 198810186443463008}
+  decreaseHealthDelay: 0.5
 --- !u!198 &198138633450537772
 ParticleSystem:
   m_ObjectHideFlags: 1

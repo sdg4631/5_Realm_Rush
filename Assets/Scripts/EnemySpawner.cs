@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
 	[SerializeField] float secondsBetweenSpawns= 5f;
 	[SerializeField] EnemyMovement enemyPrefab;
 	[SerializeField] GameObject enemyParent;
+	[SerializeField] PlayerHealth playerHealth;
 
 	void Start() 
 	{
@@ -17,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnEnemies()
     {
-		while(true) // forever
+		while(playerHealth.health.CurrentVal > 0) 
 		{
 			var newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
 			newEnemy.transform.parent = enemyParent.transform;
