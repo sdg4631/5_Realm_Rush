@@ -7,7 +7,6 @@ public class BarScript : MonoBehaviour
 {
 	[SerializeField] private float fillAmount; // unserialize later
 	[SerializeField] private float lerpSpeed;
-	[SerializeField] private float lerpDelay = 1f;
 	[SerializeField] private Image content; 
 	[SerializeField] private Image lerpingBar; 
 	[SerializeField] private Text valueText;
