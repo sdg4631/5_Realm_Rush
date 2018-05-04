@@ -255,7 +255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &57781518
 RectTransform:
   m_ObjectHideFlags: 0
@@ -827,10 +827,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465ebac897c79d442abc032ee55d4baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsBetweenSpawns: 5
+  secondsBetweenSpawns: 3
   enemyPrefab: {fileID: 114482940722489748, guid: b848245588ce57a4f8bfd41af93e3431,
     type: 2}
   enemyParent: {fileID: 265491940}
+  playerHealth: {fileID: 1492703892}
+  enemyTally: {fileID: 1888151295}
 --- !u!4 &273990437 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4983606974049652, guid: 9f7fc65b81d21814bbda2f4a06853778,
@@ -1548,6 +1550,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ecf30468607124aafd21227190c343, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &621776279
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 37.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -128.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032308357559366, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5e311d5669ae24444ae59ef2163f9d85, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &645436106 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4983606974049652, guid: 9f7fc65b81d21814bbda2f4a06853778,
@@ -2224,14 +2268,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03676468, g: 1, b: 0.16298185, a: 1}
+  m_Color: {r: 0.23875433, g: 0.7058823, b: 0.37728193, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300006, guid: 18a9f2ba9e8e08c4a923bdc2145d8b4f, type: 3}
+  m_Sprite: {fileID: 21300006, guid: cbcb9079e17e7fe4080debb6d096383a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2613,8 +2657,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 601, y: 60}
+  m_AnchoredPosition: {x: 0.00000095367, y: 0.000014275}
+  m_SizeDelta: {x: 129.85, y: 13.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087967620
 MonoBehaviour:
@@ -2628,7 +2672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.007352948, b: 0.007352948, a: 0.534}
+  m_Color: {r: 1, g: 0.007352948, b: 0.007352948, a: 0.353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3589,6 +3633,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1,
     type: 2}
   m_PrefabInternal: {fileID: 483147455}
+--- !u!114 &1492703892 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114489424720872024, guid: a467c20795e0fed40b0d21d2bebe3b04,
+    type: 2}
+  m_PrefabInternal: {fileID: 1752821827}
+  m_Script: {fileID: 11500000, guid: 1dc4ab5aaa725314aaee4adf71c8347c, type: 3}
 --- !u!4 &1556417666 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1,
@@ -3920,19 +3970,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114489424720872024, guid: a467c20795e0fed40b0d21d2bebe3b04,
         type: 2}
-      propertyPath: health.maxVal
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114489424720872024, guid: a467c20795e0fed40b0d21d2bebe3b04,
-        type: 2}
-      propertyPath: health.currentVal
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114489424720872024, guid: a467c20795e0fed40b0d21d2bebe3b04,
-        type: 2}
       propertyPath: health.bar
       value: 
       objectReference: {fileID: 1791843965}
+    - target: {fileID: 82883258874386426, guid: a467c20795e0fed40b0d21d2bebe3b04,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a467c20795e0fed40b0d21d2bebe3b04, type: 2}
   m_IsPrefabParent: 0
@@ -4163,10 +4208,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillAmount: 0
   lerpSpeed: 2
-  lerpDelay: 1
   content: {fileID: 896126531}
   lerpingBar: {fileID: 1087967620}
   valueText: {fileID: 57781520}
+  fullColor: {r: 0.23529413, g: 0.7019608, b: 0.37647063, a: 1}
+  lowColor: {r: 0.9485294, g: 0.9242871, b: 0.06974482, a: 1}
 --- !u!4 &1805003461 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1,
@@ -4484,7 +4530,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ee08173b1c5868744a723176bf9f628d, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

@@ -6,15 +6,22 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour 
 {
 	[SerializeField] Collider collisionMesh;
-	[SerializeField] ParticleSystem explosionParticlePrefab;
+	[SerializeField] int hitPoints = 500;
+
+	[SerializeField] ParticleSystem deathParticlePrefab;
 	[SerializeField] ParticleSystem sparksParticlePrefab;
 	[SerializeField] ParticleSystem detonateParticlePrefab;
-	[SerializeField] int hitPoints = 500;
-	
-	
+
+	[SerializeField] AudioClip deathSFX;
+	[SerializeField] AudioClip sparksSFX;
+	[SerializeField] AudioClip detonateSFX;
+
+	AudioSource myAudioSource;
+
 	void Start() 
 	{
 		AddBoxCollider();
+		myAudioSource = GetComponent<AudioSource>();
 	}
 
 	void Update()
@@ -38,32 +45,44 @@ public class EnemyDamage : MonoBehaviour
 		if (hitPoints <= 0)
 		{
 			KillEnemy();
-		}
-		
+		}	
+		Invoke("MuteAudio", 1f);	
 	}
 
     private void ProcessHits()
     {		
 		sparksParticlePrefab.Play();
+		myAudioSource.mute = false;
 		hitPoints = hitPoints - 1;
     }
 
     private void KillEnemy()
     {
-		var explosionFX = Instantiate(explosionParticlePrefab, transform.position, Quaternion.identity);
-		explosionFX.Play();	
-		float destroyDelay = explosionFX.main.duration;
-		Destroy(explosionFX.gameObject, destroyDelay);
+		float volume = .05f;
+		// played from camera's position because spacial blend is automatically set to 3D instead of 2D
+		AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volume); 
+
+		var deathFX = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
+		deathFX.Play();	
+		float destroyDelay = deathFX.main.duration;
+
+		Destroy(deathFX.gameObject, destroyDelay);
 		Destroy(gameObject);
 		
     }
 
 	public void DetonateEnemy()
 	{
+		AudioSource.PlayClipAtPoint(detonateSFX, transform.position);
 		var detonateFX = Instantiate(detonateParticlePrefab, transform.position, Quaternion.identity);
 		detonateFX.Play();
 		float destroyDelay = detonateFX.main.duration;
 		Destroy(detonateFX.gameObject, destroyDelay);	
 		Destroy(gameObject);	
+	}
+
+	void MuteAudio()
+	{
+		myAudioSource.mute = true;
 	}
 }

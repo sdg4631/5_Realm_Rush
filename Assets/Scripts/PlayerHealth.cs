@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 	[SerializeField] public Stat health;
 	[SerializeField] ParticleSystem baseExplosionParticlePrefab;
 	[SerializeField] float decreaseHealthDelay = 1f;
-
+	
 	private void Awake()
 	{
 		health.Initialize();
@@ -19,11 +19,11 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 	void OnTriggerEnter()
-	{	
-		Invoke("DecreaseHealth", decreaseHealthDelay);		
-	}
+    {
+        Invoke("DecreaseHealth", decreaseHealthDelay);
+    }
 
-	void BaseExplosion()
+    void BaseExplosion()
 	{
 		Vector3 temp = new Vector3(0, 15, 0);
 		var explosionPos = transform.position + temp;

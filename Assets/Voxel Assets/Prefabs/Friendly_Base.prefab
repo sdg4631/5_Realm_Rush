@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 23253275566594634}
   - component: {fileID: 65227743881725728}
   - component: {fileID: 114489424720872024}
+  - component: {fileID: 82883258874386426}
   m_Layer: 0
   m_Name: Friendly_Base
   m_TagString: Untagged
@@ -343,6 +344,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 11.55674, y: 21.772236, z: 16.867868}
   m_Center: {x: -14.864, y: 28.317719, z: -0.79413354}
+--- !u!82 &82883258874386426
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716733542366808}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.506
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!108 &108320253871558528
 Light:
   m_ObjectHideFlags: 1
@@ -395,6 +476,7 @@ MonoBehaviour:
     maxVal: 100
     currentVal: 100
   baseExplosionParticlePrefab: {fileID: 198810186443463008}
+  enemyDetonationSFX: {fileID: 8300000, guid: 604a725a377a41841b9fb1b76cbca443, type: 3}
   decreaseHealthDelay: 0.5
 --- !u!198 &198138633450537772
 ParticleSystem:
